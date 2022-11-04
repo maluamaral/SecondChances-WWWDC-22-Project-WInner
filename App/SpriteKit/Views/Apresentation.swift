@@ -43,9 +43,9 @@ struct Apresentation: View {
             }.navigationBarHidden(true)
         
         }.onAppear{
-//            firstSound.play()
-//            secondSound.play()
-//              onlySound.play()
+            firstSound.play()
+            secondSound.play()
+                //onlySound.play()
             
             MusicCoordinator.shared.addMusic(onlySound)
             MusicCoordinator.shared.addMusic(firstSound)

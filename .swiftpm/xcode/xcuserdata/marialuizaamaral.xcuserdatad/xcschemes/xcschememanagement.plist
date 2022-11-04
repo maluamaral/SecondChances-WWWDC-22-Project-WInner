@@ -7,7 +7,17 @@
 		<key>Clothes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Second Chances.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>SecondChances.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>Clothes</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>Second Chances</key>
 		<dict>
 			<key>primary</key>
 			<true/>

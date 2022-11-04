@@ -10,6 +10,14 @@ import SwiftUI
 struct TheFinal: View {
     
     @State var touchInView = false
+    private var firstSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "happy")!
+    }
+    private var secondSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "sad")!
+    }
+    
+    
     private var erasableImageView: ErasableImageView {
         let view =  ErasableImageView(
             topImageName: "garbage",
@@ -40,6 +48,16 @@ struct TheFinal: View {
             }
         }.navigationBarHidden(true)
             .background(.white)
+            .onAppear{
+                secondSound.setVolume(volume: 1.0)
+                //onlySound.setVolume(volume: 1.0)
+                
+            }
+            
+             .onChange(of: touchInView) { newValue in
+                firstSound.setVolume(volume: 1.0)
+                 //onlySound.setVolume(volume: 0.3)
+            }
     }
 }
 

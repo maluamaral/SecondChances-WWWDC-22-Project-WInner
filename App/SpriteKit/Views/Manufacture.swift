@@ -12,16 +12,16 @@ struct Manufacture: View {
     @State var touchInView = false
     @State var showAlert = true
     
-//    private var firstSound: AddMusic {
-//        MusicCoordinator.shared.getMusic(byName: "happy")!
-//    }
-//    private var secondSound: AddMusic {
-//        MusicCoordinator.shared.getMusic(byName: "sad")!
-//    }
+    private var firstSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "happy")!
+    }
+    private var secondSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "sad")!
+    }
 //
-//    private var onlySound: AddMusic {
-//        MusicCoordinator.shared.getMusic(byName: "unica")!
-//    }
+    private var onlySound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "unica")!
+    }
     
     private var erasableImageView: ErasableImageView {
         var view =  ErasableImageView(
@@ -70,8 +70,8 @@ struct Manufacture: View {
                    
                 }
            }.onChange(of: touchInView) { newValue in
-//               firstSound.setVolume(volume: 0.0)
-//               onlySound.setVolume(volume: 0.3)
+               firstSound.setVolume(volume: 0.0)
+               //onlySound.setVolume(volume: 0.3)
            }
             
             AddTexture()

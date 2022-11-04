@@ -63,7 +63,7 @@ struct Distribution: View {
             }
              .onChange(of: touchInView) { newValue in
                 firstSound.setVolume(volume: 0.0)
-                 onlySound.setVolume(volume: 0.3)
+                // onlySound.setVolume(volume: 0.3)
             }
         }.navigationBarHidden(true)
             .background(.white)

@@ -11,6 +11,9 @@ import SpriteKit
 struct ThrowingAway: View{
     private let screenWidth = UIScreen.main.bounds.size.width
     private let screenHeight  = UIScreen.main.bounds.size.height
+    private var firstSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "happy")!
+    }
     
     @State var showButton = false
     @State var showAlert = true
@@ -56,6 +59,16 @@ struct ThrowingAway: View{
                 .onReceive(NotificationCenter.default.publisher(for: Notification.Name(rawValue: "Drag")), perform: { _ in
                     showAlert = false
                 })
+                .onAppear{
+                    firstSound.setVolume(volume: 1.0)
+                    //onlySound.setVolume(volume: 1.0)
+                    
+                }
+                
+                 .onChange(of: showAlert) { newValue in
+                    firstSound.setVolume(volume: 0.0)
+                     //onlySound.setVolume(volume: 0.3)
+                }
                
             AddTexture()
         }

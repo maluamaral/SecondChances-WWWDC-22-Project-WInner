@@ -12,7 +12,7 @@ import CoreMotion
 struct MomentsTogether: View{
     private let screenWidth = UIScreen.main.bounds.size.width
     private let screenHeight  = UIScreen.main.bounds.size.height
-    
+  
     @State private var polaroid = Image("darkPolaroid")
     @State private var tapPolaroid = false
     let motionManager = CMMotionManager()

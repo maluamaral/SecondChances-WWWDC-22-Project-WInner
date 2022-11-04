@@ -11,6 +11,9 @@ struct Buy: View{
     @State var touchInView = false
     private let screenWidth = UIScreen.main.bounds.size.width
     private let screenHeight  = UIScreen.main.bounds.size.height
+    private var firstSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "happy")!
+    }
     
     private var erasableImageView: ErasableImageView {
         var view =  ErasableImageView(
@@ -30,10 +33,10 @@ struct Buy: View{
             VStack() {
                 AddText(placeholder:"Here, I'm on display for everyone, so they can get to know me and if they like me, take me to a new home.")
                     .padding(.trailing, 20)
-                    .padding(.top, 200)
+                    .padding(.top, 100)
                     .zIndex(2)
                erasableImageView
-                    .frame(width: screenWidth - 150, height: screenHeight - 150)
+                    .frame(width: screenWidth - 100, height: screenHeight - 200)
                     .zIndex(1)
                 if touchInView {
                     NextNavegation(content: { MomentsTogether() })
@@ -43,6 +46,11 @@ struct Buy: View{
             AddTexture()
         }.navigationBarHidden(true)
             .background(.white)
+            .onAppear{
+                firstSound.setVolume(volume: 1.0)
+                //onlySound.setVolume(volume: 1.0)
+                
+            }
     }
     
 }

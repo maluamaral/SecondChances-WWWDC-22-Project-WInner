@@ -23,6 +23,9 @@ struct AlertLandscape: View {
                 Text("Portrait mode required, please rotate the iew")
                     .font(.custom("Poppins-Regular", size: 36))
                     .foregroundColor(Color("brown"))
+                Image("portrait")
+                    .resizable()
+                    .scaledToFit()
             }
         }
     }

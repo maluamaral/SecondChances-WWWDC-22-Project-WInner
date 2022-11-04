@@ -11,10 +11,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                VStack{
-                    ThrowingAway()
-                }
-                
+                    Onboarding()
             }
             .navigationViewStyle(.stack)
             .ignoresSafeArea()

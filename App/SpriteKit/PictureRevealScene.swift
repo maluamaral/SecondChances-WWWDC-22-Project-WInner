@@ -9,6 +9,7 @@ import SpriteKit
 import CoreMotion
 
 class PictureRevealScene : SKScene {
+    private let sound = AddMusic(name: "polaroid", format: ".mp3")
     var motionManager = CMMotionManager()
     var queue = OperationQueue()
     
@@ -93,9 +94,14 @@ class PictureRevealScene : SKScene {
                             return
                         }
             
-                        if  myData.acceleration.x > 0.4 || myData.acceleration.x < -0.4 {
+                        if  myData.acceleration.x > 0.3 || myData.acceleration.x < -0.3 {
                             polaroid.alpha = self.oppacity
+                            self.sound.setVolume(volume: 30.0)
+                            self.sound.play()
                             self.oppacity -= 0.2
+                            
+                        }else{
+                            self.sound.pauseSound()
                         }
                         
                         if polaroid.alpha < 0.1 {
@@ -110,6 +116,7 @@ class PictureRevealScene : SKScene {
             if closeButton.contains(location),
                 let openPolaroidIndex = openPolaroidIndex {
                 let (startingPosition, startingAngle) = positions[openPolaroidIndex]
+                self.sound.stopSound()
                 closeButton.isHidden = true
                 
                 motionManager.stopAccelerometerUpdates()

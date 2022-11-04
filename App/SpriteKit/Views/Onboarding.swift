@@ -12,19 +12,20 @@ struct Onboarding: View {
             Color("creme")
                 .ignoresSafeArea()
             VStack(alignment: .leading){
-                Text("Malu Amaral")
-                    .font(.custom("Poppins-Regular", size: 36))
-                    .foregroundColor(Color("black"))
-                Text("Second Chances")
-                    .font(.custom("Koulen-Regular", size: 96))
-                    .foregroundColor(Color("black"))
+                VStack{
+                    Text("Malu Amaral")
+                        .font(.custom("Poppins-Regular", size: 36))
+                        .foregroundColor(Color("black"))
+                    Text("Second Chances")
+                        .font(.custom("Koulen-Regular", size: 96))
+                        .foregroundColor(Color("black"))
+                }
+                Image("capa")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth - 125, height: screenHeight - 300, alignment: .center)
                 
-                Rectangle()
-                    .fill(Color.white)
-                    .frame(width: screenWidth - 100, height: screenHeight - 400, alignment: .center)
-                    .padding(.bottom, 300)
-            }
-            .padding(.top, 200)
+            }//.padding(.top, 200)
             
             NavigationLink(destination: Apresentation()){
                 ZStack(){
@@ -36,8 +37,7 @@ struct Onboarding: View {
                         .font(.system(size: 36, weight: .medium, design: .default))
                         .foregroundColor(Color("creme"))
                     
-                }
-                .padding(.top, 700)
+                } .padding(.top, UIScreen.main.bounds.size.height * 0.8)
             }
             
             Image("tissue")

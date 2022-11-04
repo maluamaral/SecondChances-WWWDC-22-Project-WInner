@@ -9,6 +9,11 @@ import SwiftUI
 
 struct Sale: View {
     @State var touchInView = false
+    
+    private var firstSound: AddMusic {
+        MusicCoordinator.shared.getMusic(byName: "happy")!
+    }
+    
     private var erasableImageView: ErasableImageView {
         var view =  ErasableImageView(
             topImageName: "sale",
@@ -43,6 +48,16 @@ struct Sale: View {
                     }
                 }
                 AddTexture()
+                
+            }.onAppear{
+                firstSound.setVolume(volume: 1.0)
+                //onlySound.setVolume(volume: 1.0)
+                
+            }
+            
+             .onChange(of: touchInView) { newValue in
+                firstSound.setVolume(volume: 0.0)
+                 //onlySound.setVolume(volume: 0.3)
             }
         }.navigationBarHidden(true)
             .background(.white)

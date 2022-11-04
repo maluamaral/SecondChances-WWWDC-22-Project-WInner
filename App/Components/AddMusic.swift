@@ -45,7 +45,7 @@ class AddMusic {
     }
     
     func setVolume(volume: Float){
-        audioPlayer.volume = volume
+        audioPlayer.setVolume(volume, fadeDuration: 3)
     }
     
     func playOnce(){
