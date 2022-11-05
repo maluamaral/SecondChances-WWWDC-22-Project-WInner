@@ -1,7 +1,7 @@
 # **Second Changes**
 ### WWDC 22 Winner
 
->This is a swift playground created by me and submitted to WWDC22 Swift Student Challenge. You can see a video preview on [youtube](https://youtu.be/MYVMZRC9HHI).
+>This is a swift playground created by me and submitted to WWDC22 Swift Student Challenge. You can see more in [portfólio](https://maluamaral.myportfolio.com/second-chances).
 
 ## About the project
 Clothes are part of us. We share moments and our history with them, as well as showing our personality, origins and who we are through them. This project is about how important they are to us and to the world, and about the need to give them a second chance to have other stories with other people when we no longer want to wear them. Besides resignifying, we contribute to take care of the planet and other people.
