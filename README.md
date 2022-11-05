@@ -1,5 +1,5 @@
 # **Second Changes**
-### WWWDC 22 Winner
+### WWDC 22 Winner
 
 >This is a swift playground created by me and submitted to WWDC22 Swift Student Challenge. You can see a video preview on [youtube](https://youtu.be/MYVMZRC9HHI).
 
